@@ -1,0 +1,541 @@
+
+/*============| Side 1: Right side |================ */
+
+.hero-area {
+   position: relative;
+   color: white;
+   background:linear-gradient(145deg,#146 25%, #168 50%,#146, #168);
+   background-size: 200% 200%;
+   animation: hero-bg 20s 0.7s ease-in-out;
+   -webkit-animation: hero-bg 20s 0.7s ease-in-out infinite;
+   /*=========================================================
+   Apply overflow: hidden to hero-area instead of body and html
+   since this is where the problem is: why page content shifts...
+   ===========================================================*/
+   /*overflow: hidden;*/
+   
+}
+
+@keyframes hero-bg {
+
+    100% {
+        background-position: 100% 50%;
+        background-size: 100% 100%;
+        background:linear-gradient(145deg,#146 #168);
+
+    }
+
+}
+
+nav {
+    height: 80px;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 82%;
+    height: inherit;
+}
+
+.hideReloadHome {
+    opacity: 0;
+    transform: translateX(10px) rotateZ(90deg);
+    -webkit-transform: translateX(10px) rotateZ(90deg);
+    -moz-transform: translateX(10px) rotateZ(90deg);
+    -ms-transform: translateX(10px) rotateZ(90deg);
+    -o-transform: translateX(10px) rotateZ(90deg);
+    
+}
+
+.showReloadHome {
+    opacity: 0.8;
+    transform: translateX(-38px) rotateZ(-135deg);
+    -webkit-transform: translateX(-38px) rotateZ(-135deg);
+    -moz-transform: translateX(-38px) rotateZ(-135deg);
+    -ms-transform: translateX(-38px) rotateZ(-135deg);
+    -o-transform: translateX(-38px) rotateZ(-135deg);
+}
+
+.main-button-cover {
+    width: 110px; 
+    margin-left: auto;
+    margin-right: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.main-button-cover > div:nth-child(1) {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+    transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s linear;
+    -webkit-transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s linear;
+    -moz-transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s linear;
+    -ms-transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s linear;
+    -o-transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1), opacity 0.5s linear;
+}
+
+.main-button {
+    color: var(--hero-area-color2);
+    font-size: 17.5px;
+    width: 0%;
+    height: inherit;
+    display: flex;
+    background: #158;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    z-index: 2;
+    /*===========================
+    added position relative here 
+    for z-index to work
+    ===========================*/
+    position: relative;
+}
+
+a {
+    color: var(--hero-area-color);
+    text-decoration: none;
+}
+
+button:hover, button:focus {
+    outline: none;
+}
+
+.remove-link-color {
+    /*================================
+    To remove any lines or dots from the
+    icons wrapped in a tags
+    =================================*/
+    color: transparent;
+}
+
+
+/*========= Nav left side ================*/
+
+.scene {
+    margin-left: 0;
+    width: 50px;
+    height: 40px;
+    perspective: 1000px;
+}
+
+.card {
+    width: inherit;
+    height: inherit;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card__face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    width: inherit;
+    height: inherit;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.card__front, .card__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__back {
+    transform: rotateY(180deg);
+}
+
+.flipcard-on-button-click {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+.cubeLogoCover {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    width: 30px;
+    height: 30px;
+}
+
+.course-outline-menu-img {
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+
+
+
+
+/*====================
+ Animated carousel area 
+ =====================*/
+
+.animatedCarousel {
+   height: 190px;
+   width: 85%;
+   display: flex;
+   margin-left: auto;
+   margin-right: auto;   
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+
+
+
+.click {
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: on-click 0.5s 1.5s forwards;
+    -webkit-animation: on-click 0.5s 1.5s forwards;
+}
+
+@keyframes on-click {
+    0% {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+    40% {
+        border-right: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+    70% {
+        border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        transform: scale(2.2);
+        -webkit-transform: scale(2.2);
+        -moz-transform: scale(2.2);
+        -ms-transform: scale(2.2);
+        -o-transform: scale(2.2);
+        border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 1px 0.2px rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+.cursor-pointer {
+    background: url("../img/arrow.svg") 0 0/ contain;
+    height: 19px;
+    width: 19px;
+    opacity: 0;
+    transform: translate(20px, 20px);
+    -webkit-transform: translate(20px, 20px);
+    -moz-transform: translate(20px, 20px);
+    -ms-transform: translate(20px, 20px);
+    -o-transform: translate(20px, 20px);
+    animation: cursor-pointer-movement 1s 1s ease-in-out forwards;
+    -webkit-animation: cursor-pointer-movement 1s 1s ease-in-out forwards;
+}
+
+.normalCursorPosition {
+    background: url("../img/arrow.svg") 0 0/ contain;
+    height: 23px;
+    width: 23px;
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+}
+
+@keyframes cursor-pointer-movement {
+    0% {
+        height: 19px;
+        width: 19px;
+        transform: translate(20px, 20px);
+        -webkit-transform: translate(20px, 20px);
+        -moz-transform: translate(20px, 20px);
+        -ms-transform: translate(20px, 20px);
+        -o-transform: translate(20px, 20px);
+    }
+
+    50% {
+        height: 9px;
+        width: 9px;
+    }
+
+    100% {
+        height: 10px;
+        width: 10px;
+        transform: translate(0px, 0px);
+        -webkit-transform: translate(0px, 0px);
+        -moz-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+        -o-transform: translate(0px, 0px);
+}
+   
+}
+
+
+.analogueClock {
+    background: transparent;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    animation: clock-border 1s 0.4s linear forwards;
+    -webkit-animation: clock-border 1s 0.4s linear forwards;
+    opacity: 0;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+}
+
+@keyframes clock-border {
+    0% {
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    40% {
+        border-right: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    70% {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    100% {
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 1px 0.2px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.centerBox {
+    background-color: rgb(46, 43, 43);
+    border: 1px solid grey;
+    width: 13px;
+    height: 13px;
+    border-radius: 5px;
+    position: absolute;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.secondHand {
+    background-color: rgb(244, 164, 96, 0.8);
+    width: 2px;
+    height: 65px;
+    position: absolute;
+    top: 19px;
+    transform-origin: 45% 68%;
+}
+
+.minuteHand {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 3px;
+    height: 47px;
+    border-radius: 1px;
+    position: absolute;
+    top: 22px;
+    transform-origin: 34% 88%;
+}
+
+.hourHand {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 4px;
+    height: 33px;
+    border-radius: 1px;
+    position: absolute;
+    top: 33px;
+    transform-origin: 38% 88%;
+}
+
+
+/*==========================
+contributor/Learn more Area
+============================*/
+
+.contributorArea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: grid;
+    color: var(--hero-area-color2);
+    position: absolute;
+    top: 270px;
+    /*==================================================
+    without left:0, mobile version has space on the left
+    ===================================================*/
+    left: 0; 
+}
+
+.courseName {
+    font-size: 17.5px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--hero-area-color3);
+    margin-left: auto;
+    margin-right: auto;
+    width: 215px;
+}
+
+
+.author {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 1s linear;
+    -webkit-transition: opacity 1s 0.8s linear;
+    -moz-transition: opacity 1s 0.8s linear;
+    -ms-transition: opacity 1s 0.8s linear;
+    -o-transition: opacity 1s 0.8s linear;
+}
+
+
+
+/*=========| Media Query |=============*/
+
+@media screen and (min-width: 768px) {
+
+    
+    .main-button-cover {
+        width: 125px; 
+        margin-right: 50px;
+    }
+    
+    .main-button {
+        font-size: 20px;
+    }
+
+    .click {
+        width: 50px;
+        height: 50px;
+    }
+
+    .analogueClock {
+        width: 140px;
+        height: 140px;
+    }
+
+    .centerBox {
+        width: 14px;
+        height: 14px;
+        border-radius: 5px;
+    }
+    
+    .secondHand {
+        height: 70px;
+        top: 20px;
+        transform-origin: 30% 70%;
+    }
+    
+    .minuteHand {
+        height: 50px;
+        top: 25px;
+        transform-origin: 34% 88%;
+     
+    }
+    
+    .hourHand {
+        height: 35px;
+        top: 40px;
+        transform-origin: 38% 85%;
+    }
+    
+    
+
+    .courseName {
+        font-size: 19px;
+        width: 235px;
+    }
+
+    .author {
+        font-size: 17px;
+    }
+
+    .animatedCarousel {
+        height: 220px;
+        width: 85%;
+    }
+
+    .contributorArea {
+        top: 300px;
+    }
+    
+}
+
+
+.waitingForCube {
+    top: 310px;
+    opacity: 0;
+}
+
+.showContributorAreaAfterCube {
+    top: 200px;
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 790px) {
+
+    .animatedCarousel {
+        height: 220px;
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: auto;  
+        margin-right: auto;
+    }
+
+    .carousel {
+        width: 30%;
+        height: 220px;
+        margin-right: 2%;
+    }
+
+    .click {
+        margin-top: 50%;
+    }
+
+    .analogueClock {
+        animation: clock-border 1s 3s linear forwards;
+        -webkit-animation: clock-border 1s 3s linear forwards;
+    }
+    
+}
+

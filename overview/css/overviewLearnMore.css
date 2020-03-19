@@ -1,0 +1,340 @@
+
+:root {
+    --hero-area-color: rgba(255, 255, 255, 0.85);
+    --hero-area-color2: rgba(255, 255, 255, 0.6);
+    --hero-area-color3: rgba(255, 255, 255, 0.1);
+    --hero-area-color4: rgba(255, 255, 255, 0.7);
+}
+
+
+.learnMoreArea {
+    margin-top: 70px;
+    display: none;     
+}
+
+.learnMoreInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    height: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 65px; 
+}
+
+.learn1, .learn2, .learn3 {
+    width: 50%;
+    margin-top: 30px;
+    border-bottom: 1px solid var(--hero-area-color3);
+    color: var(--hero-area-color4);
+}
+
+@media screen and (min-width: 768px) {
+    
+    
+    .learnMoreInner {
+        margin-top: 87px; 
+    }
+    
+    
+    .codeBlock {
+       font-size: 17px;
+    }
+
+    .learn {
+        font-size: 16px;
+    }
+    
+}
+
+.codeBlock {
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.learn {
+    width: 87%;
+    font-size: 15px;
+    margin: 10px 0px 10px 25px;
+}
+
+.end {
+    margin-bottom: 15px;
+}
+
+
+/*=========| Footer Area |=============*/
+
+.footer {
+    height: 200px;
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    opacity: 0.5;
+    display: none; 
+}
+
+.footerInner {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.email {
+    display: inline-block;
+}
+
+.call {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+
+.twitter-profile {
+    display: inline-block;
+}
+
+.st-custom-button[data-network] {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: bold;
+    color: #fff; 
+    margin: 0;
+}
+
+
+.svgShare {
+    margin-right: 5px;
+}
+
+.svgShare1 {
+    width: 26px;
+    height: 26px;
+}
+
+.svgShare3 {
+    width: 35px;
+    height: 31px;
+}
+
+.svgShare2, .svgShare4 {
+    width: 29px;
+    height: 29px;
+}
+
+.contact {
+    margin-top: 30px;
+}
+.copyright {
+    margin-top: 55px;
+}
+
+.share {
+    margin-top: 15px;
+}
+
+.github {
+    display: inline-block;
+   
+}
+
+
+.back-to-top {
+    position: fixed;
+    width: 33px;
+    height: 33px;
+    top: 550px;
+    left: 74%;
+    z-index: 10;
+    opacity: 0;
+}
+
+.back-to-top > div {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.arrowCover-overview {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    background: white;
+}
+
+.arrowCover-home {
+    box-shadow: none;
+    background: transparent;
+}
+
+.back-to-top > div > div {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    z-index: 10;
+    opacity: 1;
+}
+
+.arrow-overview {
+    background: url("../../img/arrowColor2.svg") 0 0/ contain;
+}
+
+.arrow-home {
+    background: url("../../img/arrow.svg") 0 0/ contain;
+}
+
+
+/*=========| Media Query |=============*/
+
+
+@media screen and (min-width: 345px) {
+    .back-to-top {
+        left: 75%;
+    } 
+}
+
+@media screen and (min-width: 369px) {
+    .back-to-top {
+        left: 76%;
+    } 
+}
+
+@media screen and (min-width: 407px) {
+    .back-to-top {
+        left: 77%;
+    } 
+}
+
+@media screen and (min-width: 442px) {
+    .back-to-top {
+        left: 82%;
+    } 
+}
+
+@media screen and (min-width: 482px) {
+    .back-to-top {
+        left: 83%;
+    } 
+}
+
+@media screen and (min-width: 561px) {
+    .back-to-top {
+        left: 84%;
+    } 
+}
+
+@media screen and (min-width: 649px) {
+    .back-to-top {
+        left: 85%;
+    } 
+}
+
+@media screen and (min-width: 760px) {
+    .back-to-top {
+        left: 86%;
+    } 
+}
+
+@media screen and (min-width: 1014px) {
+    .back-to-top {
+        left: 87%;
+    } 
+}
+
+
+@media screen and (max-height: 620px) {
+    .back-to-top {
+        top: 400px;
+    }
+}
+
+@media screen and (min-width: 790px) {
+    .footer {
+        height: 35px;
+        margin-top: 10px;
+        padding-bottom: unset;
+    }
+
+    .footerInner {
+        flex-direction: row;
+        
+    }
+
+    .learnMoreArea {
+         margin-top: 130px;     
+     }
+    
+    .learnMoreInner {
+        flex-direction: row;
+        width: 85%;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-top: 0;
+    }
+
+    .learn1, .learn2, .learn3 {
+        width: 30%;
+        margin-top: 0;
+        color: var(--hero-area-color2);
+    }
+    
+    .learn {
+        height: 100px;
+    }
+
+    .contact, .copyright, .share {
+        margin-top: 0;
+    }
+
+    .copyright {
+        margin-right: auto;
+    }
+    
+    .contact {
+        margin-right: 25px;
+    }
+
+    .share {
+        width: 30%;
+    }
+
+    .arrow {
+        margin-right: 6%;
+    }
+    
+}
+
+@media screen and (min-width: 795px) {
+    .learn {
+        height: 80px;
+     
+    }
+}
+
+@media screen and (min-width: 1031px) {
+    .learn {
+        height: 60px;
+     
+    }
+}
+
+
+

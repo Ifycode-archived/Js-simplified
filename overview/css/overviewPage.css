@@ -1,0 +1,94 @@
+
+/*==============| HomePage CSS |====================*/
+
+:root {
+    --hero-area-color: rgba(255, 255, 255, 0.85);
+    --hero-area-color2: rgba(255, 255, 255, 0.6);
+    --hero-area-color3: rgba(255, 255, 255, 0.1);
+    --hero-area-color4: rgba(255, 255, 255, 0.7);
+}
+
+
+@font-face {
+    font-family: Worksans;
+    src: url(../../fonts/Work_Sans/WorkSans-Regular.ttf);
+    
+  }
+
+  @font-face {
+    font-family: Karla;
+    src: url(../../fonts/Karla/Karla-Regular.ttf);
+    
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    height: 100vh;
+    background:  white;
+    font-family: Worksans, Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    /*=============================================================
+    Works but prevents hiding back to top button (scroll function)
+
+    overflow-x added to both body and html to stop content shifting
+    to the left on scroll/touch of screen
+    ===============================================================*/
+    /*overflow-x: hidden;*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px 1fr;
+    height: 100%;
+    background:white;
+}
+
+.main-content-side {
+    height: auto; 
+    background:white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 370px 1fr;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+@media screen and (min-width: 768px) {
+    .main-content-side {
+        grid-template-columns: 1fr;
+        grid-template-rows: 420px 1fr;
+    }
+}
+
+
+/*=========| Media Query |=============*/
+
+@media screen and (min-width: 790px) {
+    body {
+        grid-template-columns: 0px 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .main-content-side {
+        height: auto; 
+        grid-template-columns: 1fr;
+        grid-template-rows: 420px 1fr;
+    }
+}
