@@ -1,0 +1,261 @@
+
+
+/*==============| HomePage CSS |====================*/
+
+:root {
+    --hero-area-color: rgba(255, 255, 255, 0.85);
+    --hero-area-color2: rgba(255, 255, 255, 0.6);
+    --hero-area-color3: rgba(255, 255, 255, 0.1);
+    --hero-area-color4: rgba(255, 255, 255, 0.7);
+}
+
+
+@font-face {
+    font-family: Worksans;
+    src: url(../../fonts/Work_Sans/WorkSans-Regular.ttf);
+    
+  }
+
+  @font-face {
+    font-family: Karla;
+    src: url(../../fonts/Karla/Karla-Regular.ttf);
+    
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+html, body {
+    height: 100vh;
+    font-family: Worksans, Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.body-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 1fr;
+}
+
+.course-outline {
+    /*background: orangered;*/
+    font-size: 30px;
+    font-weight: bold;   
+}
+
+.course-outline-inner {
+    background: #168;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    width: 80%;
+    height: 97%;
+    margin: auto;
+    border-radius: 15px 0px 15px 0px;
+    -webkit-border-radius: 15px 0px 15px 0px;
+    -moz-border-radius: 15px 0px 15px 0px;
+    -ms-border-radius: 15px 0px 15px 0px;
+    -o-border-radius: 15px 0px 15px 0px;
+}
+
+
+.course-outline-inner span {
+    display: block;
+    margin: 10px;
+    padding-left: 20px;
+}
+
+.course-outline-inner > span:nth-child(1) {
+    padding: 20px;
+}
+
+.main-content-side {
+    background: seagreen;
+}
+
+.main-content-side-inner {
+    background: white;
+    padding: 10px;
+    height: 100%;
+    overflow: auto;
+}
+
+.contentContainers {
+    padding: 20px;
+    width: 90%;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.4em;
+    text-align: justify;
+    letter-spacing: -1px;
+}
+
+.first-contentContainer {
+    padding: 15px 20px 20px 20px;
+}
+
+hr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    line-height: 1.65em;
+}
+
+.paragraphs {
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65em; 
+}
+
+h4 {
+    font-family: Karla, Georgia , sans-serif;
+    font-size: 17px;
+    opacity: 0.8;
+    line-height: 1.65em;
+    text-align: start;
+}
+
+/*
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    line-height: 1.65em;
+    padding-bottom: 10px;
+}
+*/
+
+.importantColor {
+    color: #158;
+}
+
+.first-paragraph {
+    margin-top: 15px;
+   
+}
+
+.span-displayed-block {
+    display: block;
+}
+
+.step {
+    padding-top: 30px;
+}
+
+.sub-heading-padding {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+}
+
+.code-block {
+    padding: 15px 25px;
+    text-align: start;
+}
+
+.first-decendant-margin {
+    padding-left: 25px;
+}
+
+.blueCopyright {
+    color: #158;
+}
+
+
+.main-footer {
+    padding-bottom: 40px;
+    display: flex;
+    opacity: 1;
+}
+
+
+.text-underline, .icons {
+    color: #158;
+    text-decoration: underline;
+    text-decoration-color: rgb(17, 85, 136, 0.5);
+    text-underline-position: under;
+    -moz-text-decoration-color: rgb(17, 85, 136, 0.5);
+}
+
+@media screen and (min-width: 442px) { 
+    .contentContainers {
+        width: 80%;
+        text-align: justify;
+        letter-spacing: -1px;
+    }
+    
+}
+
+@media screen and (min-width: 790px) {
+   
+    .main-footer {
+        padding-top: 20px;
+        padding-left: 30px;
+    }
+
+    .main-share {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 50px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+/*=========| Media Query |=============*/
+
+@media screen and (min-width: 790px) {
+
+    .body-inner {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .course-outline {
+        font-size: 30px;
+        font-weight: bold;
+        height: 100vh;
+    }
+
+    .course-outline-inner {
+        width: 95%;
+        height: 97%;
+    }
+
+    .main-content-side {
+        height: 100vh;
+    }
+    
+}

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-compatible" content="ie=edge">
+        
+        <meta name="theme-color" content="#146">
+        <meta name="msapplication-navbutton-color" content="#146">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#146">
+        
+        <link rel="stylesheet" href="css/background.css">
+        <link rel="stylesheet" href="../overview/css/overviewLearnMore.css">
+    </head>
+
+    <body>
+       
+        <!--
+        <div class="back-to-top">
+            <div class="arrow"></div>
+        </div>
+        -->
+        <div class="body-inner">
+            <!--===| Course outline side |===-->
+            <div class="course-outline"> 
+                <div class="course-outline-inner"> 
+                <span> Course Outline </span>
+                <span> Topic 1 </span>
+                <span> Topic 2 </span>
+                <span> Topic 3 </span>
+                <span> Topic 4 </span>
+                <span> Topic 5 </span>
+                <span> Topic 6 </span>
+                <span> Topic 7 </span>
+                <span> Topic 8 </span>
+                <span> Topic 9 </span>
+                <span> Topic 10 </span>
+                </div>
+            </div>
+            
+            <div class="main-content-side">
+                <div class="main-content-side-inner">
+                    <div class="under-hero-area">
+                        <div id="popUp-content" class="hideBeforeButtonClick">
+                             <!--===| overview paragraphs |===-->
+                             <div class="contentContainers first-contentContainer">
+                                <h4> INTRODUCTION </h4>
+                                <p class="paragraphs first-paragraph">
+                                    Here you will find the background needed to follow through with the content
+                                    of all other chapters: HTML structure,
+                                    the DOM, how to create &amp; select elements and the basics for styling elements on the webpage. I'll begin by 
+                                    introducing HTML.
+                                    HTML =<span class="importantColor"> Hyper Text Markup Language</span>. 
+                                    Markup Language makes use of <span class="importantColor">tags</span> 
+                                    to create and/or identify content on the <span class="importantColor">webpage</span>.  
+                                    See definition of webpage and some other terms <a href="#" target="_blank" class="text-underline">here</a>.
+                                    <span class="importantColor">Text editor</span> is used to write or edit <span class="importantColor">markup language</span> and
+                                    <span class="importantColor"> programming language</span>. See difference between the languages 
+                                    and also read about <span class="importantColor">scripting language</span>
+                                    <a href="#" target="_blank" class="text-underline">here</a>. You can start with the editor already on 
+                                    your computer e.g. Notepad, but as you grow, there will need to download and install better editors like
+                                    vs code, sublime text etc. Html files are saved with <span class="importantColor">.html</span> 
+                                    (or <span class="importantColor">.htm</span>) <span class="importantColor">file extension</span>.
+                                    
+                                    <a href="#" target="_blank" class="text-underline"></a>
+                                </p>
+                
+                            </div>
+
+                            <div class="contentContainers">
+                                <h4> HTML STRUCTURE </h4>
+                                <p class="paragraphs"> 
+                                    DOM = <span class="importantColor">Document Object Model</span>. The DOM presents the HTML document 
+                                    like a tree. We'll now introduce the tags one after the other to understand this tree-like relationship 
+                                    between elements on the page better.
+                                    The html tag houses two other tags. Add the tags following these steps:
+                                   
+                                    <span class="span-displayed-block step">
+                                        <span class="importantColor"> Step 1:</span> 
+                                        Add the html tag
+                                    </span>
+                                   <span class="span-displayed-block code-block">
+                                       <code>&lt;html&gt;&lt;/html&gt;</code>
+                                   </span>
+
+                                   <span class="span-displayed-block step">
+                                    <span class="importantColor"> Step 2:</span> 
+                                     Add the head tag
+                                    </span>
+                                   <span class="span-displayed-block code-block">
+                                       <code>
+                                            <span class="span-displayed-block"> &lt;html&gt; </span>
+                                            <span class="span-displayed-block first-decendant-margin">&lt;head&gt;&lt;/head&gt;</span>
+                                            <span class="span-displayed-block"> &lt;/html&gt; </span>
+                                        </code>
+                                   </span>
+
+                                   <span class="span-displayed-block step">
+                                    <span class="importantColor"> Step 3:</span> 
+                                    Add the body tag
+                                   </span>
+                                   <span class="span-displayed-block code-block">
+                                       <code>
+                                            <span class="span-displayed-block"> &lt;html&gt; </span>
+                                            <span class="span-displayed-block first-decendant-margin">&lt;head&gt;&lt;/head&gt;</span>
+                                            <span class="span-displayed-block first-decendant-margin">&lt;body&gt;&lt;/body&gt;</span>
+                                            <span class="span-displayed-block"> &lt;/html&gt; </span>
+                                        </code>
+                                   </span>
+
+                                   <span class="span-displayed-block step">
+                                    Let's call our attention to important knowledge/tips we will be needing later on.
+                                    html is a <span class="importantColor">parent element</span> and has two 
+                                    <span class="importantColor">child elements</span>: head and body. Note: there can
+                                    only be one html tag in the html document.
+                                   </span>
+
+                                   <span class="span-displayed-block step">
+                                     Inside the head tag:  
+                                    </span>
+                                   <span class="span-displayed-block code-block">
+                                       <code>
+                                            <span class="span-displayed-block"> &lt;html&gt; </span>
+                                            <span class="span-displayed-block first-decendant-margin">
+                                                <span class="span-displayed-block"> &lt;head&gt; </span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;title&gt;
+                                                    Page title here
+                                                    &lt;/title&gt;</span>
+                                                <span class="span-displayed-block"> &lt;/head&gt; </span>
+                                            </span>
+                                            <span class="span-displayed-block first-decendant-margin">&lt;body&gt;&lt;/body&gt;</span>
+                                            <span class="span-displayed-block"> &lt;/html&gt; </span>
+                                        </code>
+                                   </span>
+
+                                   <span class="span-displayed-block step">
+                                     Inside the body tag: 
+                                    </span>
+                                   <span class="span-displayed-block code-block">
+                                       <code>
+                                            <span class="span-displayed-block"> &lt;html&gt; </span>
+                                            <span class="span-displayed-block first-decendant-margin">
+                                                <span class="span-displayed-block"> &lt;head&gt; </span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;title&gt;
+                                                    Page title here
+                                                    &lt;/title&gt;</span>
+                                                <span class="span-displayed-block"> &lt;/head&gt; </span>
+                                            </span>
+                                            <span class="span-displayed-block first-decendant-margin">
+                                                <span class="span-displayed-block"> &lt;body&gt; </span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;p&gt;
+                                                    I am a paragraph
+                                                    &lt;/p&gt;</span>
+                                                <span class="span-displayed-block"> &lt;/body&gt; </span>
+                                            </span>
+                                            <span class="span-displayed-block"> &lt;/html&gt; </span>
+                                        </code>
+                                   </span>
+                                   <span class="span-displayed-block step">
+                                        Head and body now have one child element each: title and paragraph respectively 
+                                        (p for paragraph tag). The tags introduced so far have 
+                                        <span class="importantColor">opening tag</span> <code>&lt;tagNameHere&gt;</code> 
+                                        and <span class="importantColor">closing tag</span> <code>&lt;/tagNameHere&gt;</code>.
+                                        Note: there can only be one head tag and one body tag in 
+                                        the html document. We will now cover some more of tags that can be found in the 
+                                        head and/or in the body.
+                                   </span>
+                                   
+                                </p>
+                            </div>
+
+                            <div class="contentContainers">
+                                <h4> ADDING JAVASCRIPT </h4>
+                                <div class="paragraphs"> 
+                                    <span class="span-displayed-block">
+                                        The <span class="importantColor">script tag</span> - Before now, the script tag would look like this;
+                                    </span>
+                                    
+                                    <span class="span-displayed-block code-block">
+                                        <code>&lt;script language="Javascript" type="text/javascript"&gt;&lt;/script&gt;</code>
+                                    </span>
+
+                                    The language and type attributes are no longer used/required since javascript is (now)
+                                    the default HTML <span class="importantColor">scripting language</span>.
+                                    <span class="importantColor">Attributes</span> are placed in the opening tag to provide
+                                     additional information about the element in question. They are written in
+                                     <span class="importantColor"> name and value</span> pairs: name="value".
+                                    The script tag can be put either in the head or in the body.
+                                   
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        In the head:
+                                    </span>
+
+                                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="ZEGqrGj" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Script tag in head - Js simplified course">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/ZEGqrGj">
+                                        Script tag in head - Js simplified course</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        In the body:
+                                    </span>
+
+                                    <p class="codepen" data-height="312" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="RwPeQLo" style="height: 312px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Script tag in body - Js simplified course">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/RwPeQLo">
+                                        Script tag in body - Js simplified course</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                      <span class="span-displayed-block sub-heading-padding">
+                                        The script tag <span class="importantColor">src</span> attribute: 
+                                    </span>
+
+                                    Instead of writing code in-between script tags, you can use 
+                                    <span class="importantColor">external javascript</span> i.e. write code in a separate file,
+                                    save it with <span class="importantColor">.js file extension</span> and reference it in 
+                                    the html document using the src attribute.
+
+                                    <span class="span-displayed-block code-block">
+                                        <code>&lt;script src="nameOfJSfile.js"&gt;&lt;/script&gt;</code>
+                                    </span>
+
+                                    Create a separate js file in the same folder where you have your 
+                                    <span class="importantColor">index.html</span> file (html file for
+                                     <span class="importantColor">homepage</span> is usually given the name
+                                      index.html). Add js file name in this manner:
+
+                                      <span class="span-displayed-block code-block">
+                                        <code>&lt;script src="alertTest.js"&gt;&lt;/script&gt;</code>
+                                    </span>
+
+                                    To be more organised, instead create a folder (named js) for your external js file(s) 
+                                    in the same folder where you have your index.html file. Then put alertTest.js file in it.
+                                    Reference it in the html like this:
+
+                                    <!--
+                                    <span class="span-displayed-block code-block">
+                                        <code>&lt;script src="js/alertTest.js"&gt;&lt;/script&gt;</code>
+                                    </span>
+                                    -->
+
+                                    <span class="span-displayed-block code-block margin-bottom">
+                                        <code>&lt;script src="folderNameHere/nameOfJSfile.js"&gt;&lt;/script&gt;</code>
+                                    </span>
+
+                                    <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="bGdmvaJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="External Js - Js simplified course">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/bGdmvaJ">
+                                        External Js - Js simplified course</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                      <span class="span-displayed-block sub-heading-padding">
+                                        With external javascript, we are able to separate js from html - 
+                                        code is easier to read. Other advantages are; we can reuse javascript code 
+                                        just by referencing in html and page loads faster. Preferably, place script 
+                                        tag in the body.
+                                      </span>
+
+                                </div>
+                            </div>
+        
+                            <div class="contentContainers">
+                                <h4> SELECTING ELEMENTS (CSS) </h4>
+                                <p class="paragraphs"> 
+                                </p>
+                            </div>
+
+                            <div class="contentContainers">
+                                <h4> SELECTING ELEMENTS (JAVASCRIPT) </h4>
+                                <p class="paragraphs"> 
+                                </p>
+                            </div>
+        
+                            <div class="contentContainers">
+                                <h4> ADDING CONTENT </h4>
+                                <p class="paragraphs"> 
+                                </p>
+                            </div>
+                
+                            <hr>
+        
+                            <!--===| main footer |===-->
+                            
+                            <div class="footer main-footer">
+                                <div class="footerInner">
+                                    <div class="contact">
+                                        <a href="tel:+2348133660200" class="remove-link-color">
+                                            <div class="call">
+                                                <img src="../img/call color 2.svg" class="call">
+                                            </div>
+                                        </a>
+                                        <a href="https://mobile.twitter.com/obiagba_mary" class="remove-link-color">
+                                            <div class="twitter-profile">
+                                                <img src="../img/twitter color 2.svg" class="svgShare svgShare3">
+                                            </div>
+                                        </a>
+                                        <a href="mailto:obiagba.mary.ifeoma@gmail.com" class="remove-link-color">
+                                            <div class="email">
+                                                <img src="../img/email color 2.svg" class="svgShare svgShare3">
+                                            </div>
+                                        </a>
+        
+                                        <a href="https://github.com/Ifycode" class="remove-link-color">
+                                            <div class="github">
+                                                <img src="../img/github color 2.svg" class="svgShare svgShare3">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="copyright">
+                                        <p class="blueCopyright"><code>&copy;2020 Obiagba Mary Ifeoma</code></p>
+                                    </div>
+                                    <div class="share main-share">
+                                        <div data-network="facebook" class="st-custom-button">
+                                            <img src="../img/facebook color 2.svg" class="svgShare svgShare1">
+                                        </div>
+                                        <div data-network="twitter" class="st-custom-button">
+                                            <img src="../img/twitter color 2.svg" class="svgShare svgShare2">
+                                        </div>
+                                        <div data-network="email" class="st-custom-button">
+                                            <img src="../img/email color 2.svg" class="svgShare svgShare3">
+                                        </div>
+                                        <div data-network="whatsapp" class="st-custom-button">
+                                            <img src="../img/whatsapp color 2.svg" class="svgShare svgShare4">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!--===| Main content side ===-->
+        
+        
+        <!--
+        <script src="js/homePage.js"></script>
+        <script src="js/homePageButton.js"></script>
+        <script src="jquery/jquery-3.4.1.js"></script>
+        <script src="jquery/backToTop.js"></script>
+        <script src="jquery/analogueClock.js"></script>
+        -->
+        
+    </body>
+</html>
