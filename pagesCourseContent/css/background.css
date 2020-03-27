@@ -13,7 +13,6 @@
 @font-face {
     font-family: Worksans;
     src: url(../../fonts/Work_Sans/WorkSans-Regular.ttf);
-    
   }
 
   @font-face {
@@ -46,21 +45,32 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    
 }
 
 .body-inner {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 1fr;
+    /*grid-template-rows: 600px 1fr;*/
+    grid-template-rows: 0fr 1fr;
 }
 
 .course-outline {
-    /*background: orangered;*/
-    font-size: 30px;
-    font-weight: bold;   
+   /*background: orangered;
+   */font-size: 30px;
+   font-weight: bold;
+   display: flex;
+   /**/height: 0vh;
+   transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+   -webkit-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+   -moz-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+   -ms-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+   -o-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .course-outline-inner {
+    /*display: none;*/
+    overflow: auto;
     background: #168;
     color: white;
     font-size: 30px;
@@ -75,7 +85,6 @@ body {
     -o-border-radius: 15px 0px 15px 0px;
 }
 
-
 .course-outline-inner span {
     display: block;
     margin: 10px;
@@ -86,15 +95,67 @@ body {
     padding: 20px;
 }
 
+.menu-button {
+    margin-left: 40px;
+    padding: 10px 20px;
+}
+
 .main-content-side {
-    background: seagreen;
+   /* display: none;*/
+    /*
+    ================================
+    adding overflow:hidden here will 
+    solve page shaking problem if the
+    span wasn't commented out in the
+    html.
+    ===============================*/
+    overflow: hidden;
 }
 
 .main-content-side-inner {
+    /*border: 1px solid maroon;*/
     background: white;
     padding: 10px;
-    height: 100%;
+    /*=======================================
+    changed height from 100% to 100vh so that 
+    it will show properly on smaller devices
+    ========================================*/
+    height: 100vh;
     overflow: auto;
+}
+
+.under-hero-area {
+    position: relative;
+    
+    /*border: 1px solid yellow;*/
+}
+
+.under-hero-area > div {
+   /* border: 1px solid blue;*/
+    position: absolute;
+    /*=====================================
+    added width 100% for content not to
+    overflow towards right in small devices
+    ======================================*/
+
+    width: 100%;
+    transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    -webkit-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    -ms-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.hideBeforeButtonClick {
+    top: 70px;
+    left: 0;
+    opacity: 0;
+}
+
+.showBeforeButtonClick {
+    top: 0;
+    left: 0;
+    opacity: 1;
 }
 
 .contentContainers {
@@ -175,6 +236,17 @@ ul {
     margin-bottom: 30px;
 }
 
+.padding-top {
+   /* padding-left: 25px;*/
+    padding-top: 10px;
+}
+
+.padding-top-bottom {
+    /*padding-left: 25px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .code-block {
     padding: 15px 25px;
     text-align: start;
@@ -183,6 +255,17 @@ ul {
 .first-decendant-margin {
     padding-left: 25px;
 }
+
+.text-wrap {
+    word-wrap: break-word;
+}
+
+
+
+
+
+
+
 
 .blueCopyright {
     color: #158;
@@ -204,6 +287,10 @@ ul {
     -moz-text-decoration-color: rgb(17, 85, 136, 0.5);
 }
 
+
+
+
+
 @media screen and (min-width: 442px) { 
     .contentContainers {
         width: 80%;
@@ -213,6 +300,7 @@ ul {
     
 }
 
+/*
 @media screen and (min-width: 790px) {
    
     .main-footer {
@@ -231,6 +319,8 @@ ul {
 @media screen and (min-width: 768px) {
 
 }
+*/
+
 
 
 /*=========| Media Query |=============*/
@@ -250,6 +340,7 @@ ul {
     }
 
     .course-outline-inner {
+        display: block;
         width: 95%;
         height: 97%;
     }
@@ -257,5 +348,27 @@ ul {
     .main-content-side {
         height: 100vh;
     }
+
+    .under-hero-area {
+        position: relative;
+    }
+
+    .under-hero-area > div {
+        position: absolute;
+    }
+
+    .hideBeforeButtonClick {
+        top: 0px;
+        left: -180px;
+        opacity: 0;
+    }
+
+    .showBeforeButtonClick {
+        top: 0px;
+        left: 0;
+        opacity: 1;
+    }
+
+
     
 }

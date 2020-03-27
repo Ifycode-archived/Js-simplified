@@ -23,9 +23,10 @@
         <div class="body-inner">
             <!--===| Course outline side |===-->
             <div class="course-outline"> 
-                <div class="course-outline-inner"> 
-                <span> Course Outline </span>
-                <span> Topic 1 </span>
+                <div class="course-outline-inner">
+                <button id="menu-button" class="menu-button"> Test </button> 
+                <span class="testIt"> Course Outline </span>
+                <span class="test"> Topic 1 </span>
                 <span> Topic 2 </span>
                 <span> Topic 3 </span>
                 <span> Topic 4 </span>
@@ -70,8 +71,9 @@
                             <div class="contentContainers">
                                 <h4> HTML STRUCTURE </h4>
                                 <p class="paragraphs"> 
-                                    DOM = <span class="importantColor">Document Object Model</span>. The DOM presents the HTML document 
-                                    like a tree. We'll now introduce the tags one after the other to understand this tree-like relationship 
+                                    The structure of HTML document can be likened to a family tree. Relationship between elements on the 
+                                    page is described with terms like ancestors, decendants, parent, children and siblings.
+                                    We'll now introduce the tags one after the other to understand this tree-like relationship 
                                     between elements on the page better.
                                     The html tag houses two other tags. Add the tags following these steps:
                                    
@@ -109,10 +111,11 @@
                                    </span>
 
                                    <span class="span-displayed-block step">
-                                    Let's call our attention to important knowledge/tips we will be needing later on.
                                     html is a <span class="importantColor">parent element</span> and has two 
-                                    <span class="importantColor">child elements</span>: head and body. Note: there can
-                                    only be one html tag in the html document.
+                                    <span class="importantColor">child elements</span>: head and body. Head and body are 
+                                    <span class="importantColor">siblings</span>. Note: there can only be one html tag in 
+                                    the html document. The html element is the<span class="importantColor"> root</span> 
+                                    of the html document.
                                    </span>
 
                                    <span class="span-displayed-block step">
@@ -165,10 +168,18 @@
                                         the html document. We will now cover some more of tags that can be found in the 
                                         head and/or in the body.
                                    </span>
+
+                                   <span class="span-displayed-block sub-heading-padding">
+                                    Comments:
+                                </span>
+
+                                    In HTML, anything written in-between <span class="importantColor"><code>&lt;!-- --&gt;</code></span> is a 
+                                    <span class="importantColor">comment</span>. You will soon see how comments work in subsequent examples. 
                                    
                                 </p>
                             </div>
 
+                           
                             <div class="contentContainers">
                                 <h4> ADDING JAVASCRIPT </h4>
                                 <div class="paragraphs"> 
@@ -235,14 +246,20 @@
                                     in the same folder where you have your index.html file. Then put alertTest.js file in it.
                                     Reference it in the html like this:
 
-                                    <!--
+                                   
+                                   
+                                    <!-- adding this makes page to shake on smaller devices probably because
+                                        of the margin/padding plus its a long text: -->
+
+                                    <span class="span-displayed-block code-block text-wrap">
+                                        <code>&lt;script src="folderNameHere/nameOfJSfile.js"&gt;&lt;/script&gt;</code>
+                                    </span>
+
                                     <span class="span-displayed-block code-block">
                                         <code>&lt;script src="js/alertTest.js"&gt;&lt;/script&gt;</code>
                                     </span>
-                                    -->
-
-                                    <span class="span-displayed-block code-block margin-bottom">
-                                        <code>&lt;script src="folderNameHere/nameOfJSfile.js"&gt;&lt;/script&gt;</code>
+                                   
+                                    <span class="span-displayed-block code-block">
                                     </span>
 
                                     <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="bGdmvaJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="External Js - Js simplified course">
@@ -261,25 +278,310 @@
 
                                 </div>
                             </div>
-        
+                        
                             <div class="contentContainers">
                                 <h4> SELECTING ELEMENTS (CSS) </h4>
-                                <p class="paragraphs"> 
-                                </p>
+                                <div class="paragraphs"> 
+                                    CSS = cascading Style Sheet. CSS is used for styling elements on the webpage. We
+                                    will explore how CSS can be used together with javascript later on, but first we will
+                                    use it to understand how to select elements on the webpage. 
+
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        The <span class="importantColor">style</span> attribute: 
+                                    </span>
+                                    
+                                    The style attribute is used for inline styling i.e. styling is included directly in the element's
+                                    opening tag:
+
+                                    <span class="span-displayed-block code-block margin-bottom">
+                                        <code>&lt;tagNameHere style="property: value"&gt;&lt;/tagNameHere&gt;</code>
+                                    </span>
+
+                                    <p class="codepen" data-height="344" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="GRJwXML" style="height: 344px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="style attribute - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/GRJwXML">
+                                        style attribute - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                                      
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        The <span class="importantColor">style tag</span>: 
+                                    </span>
+                                    
+                                    Styles can be written in-between style tag and placed in the head, referred to as internal styling. 
+                                    syntax for what goes in-between the style tags:
+                                    <span class="span-displayed-block code-block margin-bottom">
+                                        <code>
+                                            <span class="span-displayed-block"> selector {</span>
+                                            <span class="span-displayed-block first-decendant-margin"> property: value;</span>
+                                            <span class="span-displayed-block"> } </span>
+                                        </code>
+                                    </span>
+                                    
+                                       
+                                    <p class="codepen" data-height="512" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="MWwzPwr" style="height: 512px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="The style tag - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/MWwzPwr">
+                                        The style tag - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        External stylesheet:
+                                    </span>
+                                   
+
+                                    Styles can also be separated from html by using <span class="importantColor">external stylesheet</span>. 
+                                    Styles are written in a separate file and saved with <span class="importantColor">.css</span> file extension, 
+                                    and referenced in html with the <span class="importantColor">href attribute</span> inside the 
+                                    <span class="importantColor">link tag</span>. Link tag is a <span class="importantColor">self closing tag</span>
+                                    i.e. does not have a closing tag. Note that self closing tags can be written as 
+                                    <span class="importantColor"><code>&lt;tagNameHere&gt;</code></span>
+                                    or <span class="importantColor"><code>&lt;tagNameHere/&gt;</code></span> (just incase you see self closing tags 
+                                    with a slash in some other material). The link tag also has the <span class="importantColor">rel attribute</span> 
+                                    with the value <span class="importantColor">stylesheet</span>. The link tag is placed in the head.
+
+                                    <span class="span-displayed-block code-block margin-bottom">
+                                        <code>&lt;link rel="stylesheet" href="css/nameOfFile.css"&gt;</code>
+                                    </span>
+
+                                    For orderliness, create a css folder (named css) in the same folder with your index.html file and add your
+                                    .css file in it. 
+
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        Comments:
+                                    </span>
+
+                                    <span class="span-displayed-block code-block margin-bottom">
+                                        In CSS, anything written in-between <span class="importantColor"><code>/* */</code></span> is a comment. See how comments have been 
+                                        used to explain the code examples below.
+                                    </span>
+                                    
+                                    <p class="codepen" data-height="391" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="NWqEOeX" style="height: 391px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="NWqEOeX">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/NWqEOeX">
+                                        NWqEOeX</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                      <span class="span-displayed-block code-block">
+                                    </span>
+
+                                      <p class="codepen" data-height="441" data-theme-id="dark" data-default-tab="html,result" data-user="ifycode" data-slug-hash="eYNQQZw" style="height: 441px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eYNQQZw">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/eYNQQZw">
+                                        eYNQQZw</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+
+
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        Selecting elements by class name:
+                                    </span>
+
+                                    Add the <span class="importantColor">class attribute</span> to an element inline and make it's value 
+                                    (i.e. the class name) the selector in your stylesheet. In the stylesheet, class names have 
+                                    '<span class="importantColor"> . </span>' in front of them. The examples below show
+                                    that many element can have the same class name if we want the same styling applied to them. One element
+                                    can have more than one class names (separated by space).
+
+                                    <span class="span-displayed-block code-block">
+                                    </span>
+
+                                    <p class="codepen" data-height="442" data-theme-id="dark" data-default-tab="html,result" data-user="ifycode" data-slug-hash="yLNQQdN" style="height: 442px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="class example 1 - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/yLNQQdN">
+                                        class example 1 - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                    <span class="span-displayed-block code-block">
+                                    </span>
+
+                                    <p class="codepen" data-height="450" data-theme-id="dark" data-default-tab="html,result" data-user="ifycode" data-slug-hash="eYNQbzB" style="height: 450px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="class example 2 - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/eYNQbzB">
+                                        class example 2 - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                      <span class="span-displayed-block code-block">
+                                    </span>
+
+                                      <p class="codepen" data-height="435" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="dyoQwRj" style="height: 435px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="dyoQwRj">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/dyoQwRj">
+                                        dyoQwRj</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                    
+                                    <span class="span-displayed-block sub-heading-padding">
+                                        Selecting elements by Id:
+                                    </span>
+
+                                    Use the <span class="importantColor">Id attribute</span> to add Id name to an element. In the stylesheet,
+                                     Id names have '<span class="importantColor">#</span>' in front of them.
+
+                                     <span class="span-displayed-block code-block">
+                                    </span>
+
+                                     <p class="codepen" data-height="362" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="ExjOGeQ" style="height: 362px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Id example - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/ExjOGeQ">
+                                        Id example - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+                                    <span class="span-displayed-block code-block">
+                                    </span>
+
+                                    Id name is unique. Using the above example, no other h1 tag or any other element on the page can use page-header
+                                    as id name. If there must be another Id attribute on the page, then it must have a different Id name. If you wish
+                                    to apply same style to many elements, use class names.
+
+                                    <span class="span-displayed-block code-block">
+                                    </span>
+                                    
+                                </div>
                             </div>
 
                             <div class="contentContainers">
                                 <h4> SELECTING ELEMENTS (JAVASCRIPT) </h4>
-                                <p class="paragraphs"> 
-                                </p>
+                                <div class="paragraphs"> 
+                                    In javascript we can select elements by tag name, class name and by Id not just for styling purpose,
+                                    but also to add or remove elements on the page. We access elements on the webpage through
+                                    document object i.e. the root of all objects on the page. By 'all objects on the page' i 
+                                    mean 'all elements on the page'. Objects usually have methods: 
+                                    
+                                    <span class="span-displayed-block code-block sub-heading-padding">
+                                        <code> objectName.methodName();</code>
+                                    </span>
+
+                                    The document object has methods with which we are able to select elements: 
+                                   
+                                    <p class="padding-top-bottom">
+                                        <span class="span-displayed-block text-wrap padding-top">
+                                            <code>document.getElementsByTagName("tagNameHere");</code>
+                                        </span>
+                                        <span class="span-displayed-block text-wrap padding-top">
+                                            <code>document.getElementsByClassName("classNameHere");</code>
+                                        </span>
+                                        <span class="span-displayed-block text-wrap padding-top">
+                                           <code>document.getElementById("IdNameHere");</code>
+                                        </span>
+                                        
+                                    </p>
+
+                                    We mentioned that Id is unique earlier, this is reflected in the method name 'getElement'. 
+                                    TagName and class name on the other hand use 'getElements'. Selecting elements by Id is 
+                                    straight forward. To be able to select one out of many elements with the same tag name
+                                    or class name, we need the knowledge of a type of object called array. Class name method
+                                    store elements on the page that have the same class name as an array, while tag name method
+                                    store sibling elements on the page that have the same tag name as an array. Think of array as
+                                    something that stores a list of items and whose elements are accessed using index numbers.
+                                    The index numbers are enclosed in square brackets. The first item has index number 0, the second
+                                    has index number 1 etc.
+                                    So if there are 3 sibling div elements inside the body:
+
+                                    <span class="span-displayed-block step">
+                                       <span class="span-displayed-block code-block">
+                                           <code>
+                                                <span class="span-displayed-block"> &lt;body&gt; </span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;div&gt;&lt;/div&gt;</span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;div&gt;&lt;/div&gt;</span>
+                                                <span class="span-displayed-block first-decendant-margin">&lt;div&gt;&lt;/div&gt;</span>
+                                                <span class="span-displayed-block"> &lt;/body&gt; </span>
+                                            </code>
+                                       </span>
+
+                                       <span class="span-displayed-block step">
+                                        Selecting 1st div:
+                                        </span>
+                                       <span class="span-displayed-block code-block">
+                                           <code>
+                                            <span class="span-displayed-block text-wrap">
+                                                document.getElementsByTagName("div")[0];
+                                            </span>
+                                            </code>
+                                       </span>
+
+                                       <span class="span-displayed-block step">
+                                        Selecting 2nd div:
+                                        </span>
+                                       <span class="span-displayed-block code-block">
+                                           <code>
+                                            <span class="span-displayed-block text-wrap">
+                                                document.getElementsByTagName("div")[1];
+                                            </span>
+                                            </code>
+                                       </span>
+
+                                       <span class="span-displayed-block step">
+                                        Selecting 3rd div:
+                                        </span>
+                                       <span class="span-displayed-block code-block">
+                                           <code>
+                                            <span class="span-displayed-block text-wrap">
+                                                document.getElementsByTagName("div")[2];
+                                            </span>
+                                            </code>
+                                       </span>
+
+
+                                       <span class="span-displayed-block step">
+                                        Styling elements with javascript:
+                                        </span>
+                                        
+                                       <span class="span-displayed-block code-block">
+                                           <code>
+                                            <span class="span-displayed-block text-wrap">
+                                                selectedElement.style.property = "value";
+                                            </span>
+                                            </code>
+                                       </span>
+                                       Note: properties written with dash in it in CSS e.g. margin-left are written with camelCase in
+                                        javascript.
+
+                                        <span class="span-displayed-block code-block">
+                                        </span>
+                                       
+                                        <p class="codepen" data-height="397" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="dyoQabL" style="height: 397px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Selecting elements in javascript">
+                                            <span>See the Pen <a href="https://codepen.io/ifycode/pen/dyoQabL">
+                                            Selecting elements in javascript</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                            on <a href="https://codepen.io">CodePen</a>.</span>
+                                          </p>
+                                          <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                     
+                                </div>
                             </div>
         
                             <div class="contentContainers">
                                 <h4> ADDING CONTENT </h4>
                                 <p class="paragraphs"> 
+                                    Objects have property too. Add or change the text inside the selected element using the .innerHTML
+                                    property. 
+
+                                    <span class="span-displayed-block code-block">
+                                        <code>
+                                         <span class="span-displayed-block text-wrap">
+                                             selectedElement.innerHTML = "textGoesHere";
+                                         </span>
+                                         </code>
+                                    </span>
+
+                                    <p class="codepen" data-height="372" data-theme-id="dark" data-default-tab="html" data-user="ifycode" data-slug-hash="poJQGra" style="height: 372px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Adding content with .innerHTML - Js simplified">
+                                        <span>See the Pen <a href="https://codepen.io/ifycode/pen/poJQGra">
+                                        Adding content with .innerHTML - Js simplified</a> by Obiagba Mary Ifeoma (<a href="https://codepen.io/ifycode">@ifycode</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
                                 </p>
                             </div>
-                
+
                             <hr>
         
                             <!--===| main footer |===-->
@@ -338,14 +640,7 @@
 
         <!--===| Main content side ===-->
         
-        
-        <!--
-        <script src="js/homePage.js"></script>
-        <script src="js/homePageButton.js"></script>
-        <script src="jquery/jquery-3.4.1.js"></script>
-        <script src="jquery/backToTop.js"></script>
-        <script src="jquery/analogueClock.js"></script>
-        -->
+        <script src="js/background.js"></script>
         
     </body>
 </html>
