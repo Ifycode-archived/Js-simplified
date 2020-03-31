@@ -56,11 +56,10 @@ body {
 }
 
 .course-outline {
-   /*background: orangered;
-   */font-size: 30px;
+   font-size: 30px;
    font-weight: bold;
    display: flex;
-   /**/height: 0vh;
+   height: 50px;
    transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
    -webkit-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
    -moz-transition: height 0.4s cubic-bezier(0.19, 1, 0.22, 1);
@@ -69,7 +68,6 @@ body {
 }
 
 .course-outline-inner {
-    /*display: none;*/
     overflow: auto;
     background: #168;
     color: white;
@@ -101,7 +99,6 @@ body {
 }
 
 .main-content-side {
-   /* display: none;*/
     /*
     ================================
     adding overflow:hidden here will 
@@ -131,14 +128,9 @@ body {
 }
 
 .under-hero-area > div {
-   /* border: 1px solid blue;*/
-    position: absolute;
-    /*=====================================
-    added width 100% for content not to
-    overflow towards right in small devices
-    ======================================*/
-
-    width: 100%;
+    /*border: 1px solid blue;
+    */position: absolute;
+    /*=====================================addedwidth100%forcontentnottooverflowtowardsrightinsmalldevices======================================*/width: 100%;
     transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     -webkit-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
     -moz-transition: all 1s 0.2s cubic-bezier(0.19, 1, 0.22, 1);
@@ -157,6 +149,34 @@ body {
     left: 0;
     opacity: 1;
 }
+
+.showBeforeButtonClickSmallerDevices {
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.showAndHideSmallerDevices {
+    animation: show-and-hide-sd 0.6s;
+    -webkit-animation: show-and-hide-sd 0.6s;
+}
+
+@keyframes show-and-hide-sd {
+    50% {
+        top: 70px;
+        left: 0;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+
 
 .contentContainers {
     padding: 20px;
@@ -336,8 +356,14 @@ ul {
     .course-outline {
         font-size: 30px;
         font-weight: bold;
+        width: 0px;
         height: 100vh;
-    }
+        transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        -webkit-transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        -moz-transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        -ms-transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+        -o-transition: width 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
 
     .course-outline-inner {
         display: block;
@@ -367,6 +393,46 @@ ul {
         top: 0px;
         left: 0;
         opacity: 1;
+    }
+
+    .hideAndShow {
+        opacity: 0.5;
+        animation: hide-and-show 0.8s forwards;
+        -webkit-animation: hide-and-show 0.8s forwards;
+}
+
+    @keyframes hide-and-show {
+        50% {
+            top: 0px;
+            left: -180px;
+            opacity: 0;
+        }
+
+        100% {
+            top: 0px;
+            left: 0;
+            opacity: 0.5;
+        }
+    }
+
+
+    .showAndHide {
+        animation: show-and-hide 0.8s;
+        -webkit-animation: show-and-hide 0.8s;
+    }
+
+    @keyframes show-and-hide {
+        50% {
+            top: 0px;
+            left: -180px;
+            opacity: 0;
+        }
+
+        100% {
+            top: 0px;
+            left: 0;
+            opacity: 1;
+        }
     }
 
 
