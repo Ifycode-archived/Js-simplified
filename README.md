@@ -1,5 +1,5 @@
-# Js simplified {main website}
-Js simplified (course) website. Ongoing project.
+# Js simplified 
+Js simplified website. 
 
 Github page:
 https://ifycode.github.io/Js-simplified/
